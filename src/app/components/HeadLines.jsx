@@ -3,7 +3,7 @@ import HeadLinesMarquee from "./HeadLineMarquee";
 
 
 const HeadLines = async () => {
-    const res = await fetch('http://localhost:3000/data.json');
+    const res = await fetch('https://b13-assignment-08-tiles-gallery.vercel.app/data.json');
     const data = await res.json();
 
     return (
