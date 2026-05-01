@@ -24,7 +24,7 @@ const Navbar = () => {
 
         <ul className="flex items-center gap-5 text-[16px] font-semibold">
           <li>
-            <Link href={"/"}>Home</Link>
+            <Link href={"/"}>My Home</Link>
           </li>
           <li>
             <Link href={"/all-photos"}>All Tiles</Link>
