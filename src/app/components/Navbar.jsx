@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import logo from "@/assets/logo.png"
+import NavLink from "./NavLink";
 
 
 const Navbar = () => {
@@ -24,13 +25,13 @@ const Navbar = () => {
 
         <ul className="flex items-center gap-5 text-[16px] font-semibold">
           <li>
-            <Link href={"/"}>My Home</Link>
+            <NavLink href={"/"}>My Home</NavLink>
           </li>
           <li>
-            <Link href={"/all-photos"}>All Tiles</Link>
+            <NavLink href={"/all-tiles"}>All Tiles</NavLink>
           </li>
           <li>
-            <Link href={"/profile"}>My Profile</Link>
+            <NavLink href={"/profile"}>My Profile</NavLink>
           </li>
         </ul>
 
