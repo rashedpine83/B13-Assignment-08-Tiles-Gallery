@@ -1,5 +1,5 @@
-import TileCard from "../components/TileCard";
-import SearchTiles from "../components/SearchTiles";
+import TileCard from "../../components/TileCard";
+import SearchTiles from "../../components/SearchTiles";
 
 const getTiles = async(title = "", search = "") => 
   { const res = await fetch(`https://b13-assignment-08-tiles-gallery.vercel.app/data.json?title=${title}&search=${search}`) 
