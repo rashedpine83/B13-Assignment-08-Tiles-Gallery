@@ -12,7 +12,7 @@ const TileCard = ({ photo }) => {
         alt={photo.title}
         width={300}
         height={200}
-        className="w-full h-48 object-cover"
+        className="h-auto"
       />
 
       <div className="p-3">
