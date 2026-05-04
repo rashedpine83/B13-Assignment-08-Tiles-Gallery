@@ -1,6 +1,7 @@
-import Image from "next/image";
-import Banner from "../components/Banner";
+
 import TopFeatures from "@/components/TopFeatures";
+import Banner from "../components/Banner";
+
 
 export default function Home() {
   return (

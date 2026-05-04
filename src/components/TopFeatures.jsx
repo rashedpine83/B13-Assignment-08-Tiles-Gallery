@@ -3,7 +3,7 @@ import TileCard from './TileCard';
 
 const TopFeatures = async() => {
 
-    const res = await fetch("https://b13-assignment-08-tiles-gallery.vercel.app/data.json")
+    const res = await fetch('https://b13-assignment-08-tiles-gallery.vercel.app/data.json')
     const photos = await res.json()
     const topPhotos = photos.slice(0, 4)
 

@@ -17,7 +17,7 @@ const TilesDetails = async ({ params }) => {
       <div className="flex flex-col md:flex-row gap-8 items-center">
 
         <div className="w-full md:w-1/2">
-          <div className="relative w-full h-[300px] sm:h-[400px] md:h-[450px] overflow-hidden rounded-xl">
+          <div className="relative w-full h-75 sm:h-100 md:h-112 overflow-hidden rounded-xl">
             <Image
               src={detail?.image}
               alt={detail?.title}
