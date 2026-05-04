@@ -1,9 +1,10 @@
-import { Button } from "@heroui/react";
+
 import HeadLinesMarquee from "./HeadLineMarquee";
+import { baseUrl } from "@/constants/baseUrl";
 
 
 const HeadLines = async () => {
-    const res = await fetch('https://b13-assignment-08-tiles-gallery.vercel.app/data.json');
+    const res = await fetch(baseUrl);
     const data = await res.json();
 
     return (

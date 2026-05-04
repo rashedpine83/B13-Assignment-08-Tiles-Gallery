@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Tiles Gallery
 
-## Getting Started
+## Project Overview
 
-First, run the development server:
+**Tiles Gallery** is a modern and responsive web application built with Next.js that showcases a collection of tiles. Users can browse, search, and explore different types of tiles with a clean and user-friendly interface.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## Purpose
+
+The main goal of this project is to:
+
+- Display a collection of tiles in a visually appealing way
+- Allow users to search tiles by title
+- Practice modern web development using Next.js App Router
+- Build a responsive and dynamic UI
+
+---
+
+## Live URL
+
+https://b13-assignment-08-tiles-gallery.vercel.app
+
+---
+
+## Key Features
+
+- **Search Functionality** – Search tiles by title
+- **Responsive Design** – Works on mobile, tablet, and desktop
+- **Fast Performance** – Built with Next.js App Router
+- **Modern UI** – Clean and minimal design using Tailwind CSS
+- **Dynamic Data Fetching** – Fetch tiles from API
+- **No Results Handling** – Shows message when no tiles found
+
+---
+
+## Technologies Used
+
+- **Next.js 16 (App Router)**
+- **React.js**
+- **Tailwind CSS**
+- **Hero UI (@heroui/react)**
+- **React Icons**
+- **Daisy UI**
+- **Better Auth**
+- **Mongo Db**
+
+---
+
+## Project Structure
+
+/app
+/all-tiles
+page.jsx
+/profile
+page.jsx
+/signin
+page.jsx
+/signup
+page.jsx
+/components
+Banner.jsx
+Footer.jsx
+HeadLine.jsx
+TileCard.jsx
+SearchTiles.jsx
+/constants
+baseUrl.js
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```

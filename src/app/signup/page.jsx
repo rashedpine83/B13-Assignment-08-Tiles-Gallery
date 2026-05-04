@@ -14,42 +14,42 @@ import {
 import { Icon } from "@iconify/react";
 import { useRouter } from "next/navigation";
 import { GrGoogle } from "react-icons/gr";
+import { toast } from "react-toastify";
 
 export default function SignUpPage() {
+  const router = useRouter();
 
-    const router = useRouter();
-
-    const onSubmit = async (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
 
     const name = e.target.name.value;
     const image = e.target.image.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
-    
-    const {data, error} = await authClient.signUp.email({
-        name,
-        image,
-        email,
-        password,
-    })
 
-    if(!error){
-        router.push("/")
+    const { data, error } = await authClient.signUp.email({
+      name,
+      image,
+      email,
+      password,
+    });
+
+    if (!error) {
+      router.push("/");
     }
-    if(error){
-    alert(error.message);
- }
- if(data){
-    alert("signup successfully")
- }
+    if (error) {
+      toast.error(error.message);
+    }
+    if (data) {
+      toast.success("signup successfully");
+    }
   };
 
-  const handleGoogleSignIn = async() => {
-        await authClient.signIn.social({
-          provider: "google"
-        })
-      }
+  const handleGoogleSignIn = async () => {
+    await authClient.signIn.social({
+      provider: "google",
+    });
+  };
 
   return (
     <Card className="border mx-auto w-125 py-10 mt-5">
@@ -123,10 +123,14 @@ export default function SignUpPage() {
         </div>
       </Form>
       <p className="flex justify-center">or</p>
-        <Button onClick={handleGoogleSignIn} className="w-full" variant="tertiary">
-                <Icon icon="devicon:google" />
-                Sign in with Google
-              </Button>
+      <Button
+        onClick={handleGoogleSignIn}
+        className="w-full"
+        variant="tertiary"
+      >
+        <Icon icon="devicon:google" />
+        Sign in with Google
+      </Button>
     </Card>
   );
 }

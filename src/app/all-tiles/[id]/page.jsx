@@ -1,21 +1,20 @@
-import { Button } from '@heroui/react';
-import Image from 'next/image';
-import Link from 'next/link';
-import React from 'react';
+import { baseUrl } from "@/constants/baseUrl";
+import { Button } from "@heroui/react";
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
 
 const TilesDetails = async ({ params }) => {
   const { id } = await params;
 
-  const res = await fetch('https://b13-assignment-08-tiles-gallery.vercel.app/data.json');
+  const res = await fetch(baseUrl);
   const photos = await res.json();
 
-  const detail = photos.find(item => item.id === id);
+  const detail = photos.find((item) => item.id === id);
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-10">
-
       <div className="flex flex-col md:flex-row gap-8 items-center">
-
         <div className="w-full md:w-1/2">
           <div className="relative w-full h-75 sm:h-100 md:h-112 overflow-hidden rounded-xl">
             <Image
@@ -27,9 +26,7 @@ const TilesDetails = async ({ params }) => {
           </div>
         </div>
 
-       
         <div className="w-full md:w-1/2 space-y-4 text-center md:text-left">
-          
           <p className="font-bold text-2xl sm:text-3xl text-[#6D214F]">
             {detail?.title}
           </p>
@@ -38,9 +35,18 @@ const TilesDetails = async ({ params }) => {
             {detail?.description}
           </p>
 
-          <p><span className="font-bold text-lg">Sizes:</span> {detail?.dimensions}</p>
-          <p className='bg-amber-500 text-white font-semibold w-20 rounded-3xl text-center'> {detail?.category}</p>
-          <p><span className="font-bold text-lg">Material:</span> {detail?.material}</p>
+          <p>
+            <span className="font-bold text-lg">Sizes:</span>{" "}
+            {detail?.dimensions}
+          </p>
+          <p className="bg-amber-500 text-white font-semibold w-20 rounded-3xl text-center">
+            {" "}
+            {detail?.category}
+          </p>
+          <p>
+            <span className="font-bold text-lg">Material:</span>{" "}
+            {detail?.material}
+          </p>
 
           <p className="text-base text-gray-600">
             {detail?.currency} {detail?.price}
@@ -53,9 +59,7 @@ const TilesDetails = async ({ params }) => {
               </Button>
             </Link>
           </div>
-
         </div>
-
       </div>
     </div>
   );
