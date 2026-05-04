@@ -5,7 +5,7 @@ import React from "react";
 
 const TileCard = ({ photo }) => {
   return (
-    <div className="border rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300 p-5">
+    <div className="border m-5 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300 p-5">
 
       <div className="flex justify-center">
         <Image

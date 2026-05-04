@@ -39,7 +39,7 @@ const TilesDetails = async ({ params }) => {
           </p>
 
           <p><span className="font-bold text-lg">Sizes:</span> {detail?.dimensions}</p>
-          <p><span className="font-bold text-lg">Category:</span> {detail?.category}</p>
+          <p className='bg-amber-500 text-white font-semibold w-20 rounded-3xl text-center'> {detail?.category}</p>
           <p><span className="font-bold text-lg">Material:</span> {detail?.material}</p>
 
           <p className="text-base text-gray-600">

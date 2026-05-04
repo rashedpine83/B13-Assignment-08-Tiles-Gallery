@@ -28,7 +28,7 @@ const SearchTiles = () => {
   };
 
   return (
-    <div className="flex justify-center items-center mb-8">
+    <div className="flex justify-center items-center m-6">
       <div className="relative w-full max-w-xl">
 
         <FaSearch className="absolute top-1/2 left-4 transform -translate-y-1/2 text-gray-400" />

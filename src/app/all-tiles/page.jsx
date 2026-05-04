@@ -19,7 +19,7 @@ const AllTiles = async ({ searchParams }) => {
   return (
     <div className="container mx-auto my-10">
 
-      <h2 className="text-3xl font-bold mb-6">All Tiles</h2>
+      <h2 className="text-3xl font-bold m-5">All Tiles</h2>
 
       <SearchTiles />
 

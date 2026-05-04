@@ -9,7 +9,7 @@ const HeadLines = async () => {
     return (
         
         <div className="flex justify-between items-center gap-3 bg-gray-200 py-2 px-2 container mx-auto">
-            <p className="p-2 w-30 bg-[#6D214F] text-white ">New Arrivals:</p>
+            <p className="p-2 w-30 bg-[#6D214F] text-white text-xs md:text-[16px]">New Arrivals:</p>
 
             <HeadLinesMarquee data={data} />
         </div>

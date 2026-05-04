@@ -12,6 +12,7 @@ import {
   TextField,
 } from "@heroui/react";
 import {Icon} from "@iconify/react"
+import { toast } from "react-toastify";
 
 
 
@@ -31,10 +32,10 @@ export default function SignInPage() {
     })
 
     if(error){
-    alert(error.message);
+    toast.error(error.message);
  }
  if(data){
-    alert("signin successfully")
+    toast.success("signin successfully")
  }
   };
 
@@ -97,7 +98,7 @@ export default function SignInPage() {
         <div className="flex gap-2">
           <Button type="submit">
             <Check />
-            Submit
+            Login
           </Button>
           <Button type="reset" variant="secondary">
             Reset
