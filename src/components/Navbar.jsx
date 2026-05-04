@@ -5,6 +5,7 @@ import logo from "@/assets/logo.png"
 import NavLink from "./NavLink";
 import { authClient } from "@/lib/auth-client";
 import { Avatar, Button } from "@heroui/react";
+import { HiMenu } from "react-icons/hi";
 
 
 const Navbar = () => {
@@ -19,6 +20,30 @@ const Navbar = () => {
   return (
     <div className="px-2 shadow">
       <nav className=" flex justify-between items-center  py-3 max-w-7xl mx-auto w-full">
+
+        {/* Mobile Dropdown start */}
+        <div className="dropdown md:hidden relative">
+          
+          <label tabIndex={0} className="btn btn-ghost">
+            <HiMenu className="text-2xl" />
+          </label>
+
+          <ul
+            tabIndex={0}
+            className="menu menu-sm dropdown-content mt-3 p-3 shadow bg-base-100 rounded-box w-52 z-9"
+          >
+           <li>
+            <NavLink href={"/"}>Home</NavLink>
+          </li>
+          <li>
+            <NavLink href={"/all-tiles"}>All Tiles</NavLink>
+          </li>
+          <li>
+            <NavLink href={"/profile"}>My Profile</NavLink>
+          </li>
+          </ul>
+        </div>
+        {/* Mobile Dropdown end */}
         <div className="flex gap-2 items-center">
           <Link href="/">
           <Image
@@ -33,9 +58,10 @@ const Navbar = () => {
           
         </div>
 
-        <ul className="flex items-center gap-5 text-[16px] font-semibold">
+        <div className="navbar-center hidden md:flex">
+          <ul className="flex items-center gap-5 text-[16px] font-semibold">
           <li>
-            <NavLink href={"/"}>My Home</NavLink>
+            <NavLink href={"/"}>Home</NavLink>
           </li>
           <li>
             <NavLink href={"/all-tiles"}>All Tiles</NavLink>
@@ -44,9 +70,10 @@ const Navbar = () => {
             <NavLink href={"/profile"}>My Profile</NavLink>
           </li>
         </ul>
+        </div>
 
-        <div className="flex gap-4">
-          {!user && <ul className="flex items-center gap-3 text-sm">
+        <div>
+          {!user && <ul className="flex items-center gap-3">
             <li>
               <Link href={"/signup"}><Button variant="secondary">SignUp</Button></Link>
             </li>

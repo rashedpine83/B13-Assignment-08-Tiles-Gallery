@@ -7,13 +7,15 @@ const TileCard = ({ photo }) => {
   return (
     <div className="border rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300 p-5">
 
-      <Image
+      <div className="flex justify-center">
+        <Image
         src={photo.image}
         alt={photo.title}
         width={300}
-        height={200}
-        className="h-auto"
+        height={300}
+        className=" w-70 h-50 object-cover group-hover:scale-110 transition duration-300"
       />
+      </div>
 
       <div className="p-3">
         <p className="font-semibold text-lg text-gray-700">{photo.title}</p>
